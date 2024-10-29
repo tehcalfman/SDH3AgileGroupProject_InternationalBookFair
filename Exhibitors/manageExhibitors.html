@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Exhibitors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="index.html" class="dropbtn">Exhibitors</a>
+            <div class="dropdown-content">
+              <a href="manageExhibitors.html">Admin</a>
+        <li><a href="index.html">Visitors</a></li>
+      </ul> 
+    <div class="main-container">
+        <div class="exhibitors-list">
+            <h2>Exhibitors</h2>
+            <div class="manageExhibitors"></div>
+        </div>
+        <div class="form-container">
+            <h3>Add/Edit Exhibitor</h3>
+            <form id="exhibitorForm">
+                <input type="hidden" id="exhibitorId">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="stand">Stand</label>
+                <input type="text" id="stand" name="stand" required>
+    
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" required>
+    
+                <label for="agegroup">Age Group</label>
+                <input type="text" id="agegroup" name="agegroup">
+
+                <label for="image">Image URL</label>
+                <input type="text" id="image" name="image">
+    
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+let exhibitors = [];  
+
+fetch('exhibitors.json').then(response => response.json()).then(data => {
+    exhibitors = data;
+    addDataToHTML();
+});
+
+function addDataToHTML() {
+    let listExhibitorsHTML = document.querySelector('.manageExhibitors');
+    listExhibitorsHTML.innerHTML = '';  
+
+    exhibitors.forEach((exhibitor, index) => {
+        let exhibitorDiv = document.createElement('div');
+        exhibitorDiv.classList.add('exhibitor');
+        exhibitorDiv.innerHTML = `
+            <div class="exhibitor-info">
+                <h2>${exhibitor.name}</h2>
+                <div class="buttons">
+                    <button class="edit-btn" onclick="editExhibitor(${index})">Edit</button>
+                    <button class="delete-btn" onclick="deleteExhibitor(${index})">Delete</button>
+                </div>
+            </div>
+        `;
+        listExhibitorsHTML.appendChild(exhibitorDiv);
+    });
+}
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    addOrUpdateExhibitor(); 
+});
+
+
+function addOrUpdateExhibitor() {
+    const id = document.getElementById('exhibitorId').value;
+    const name = document.getElementById('name').value;
+    const image = document.getElementById('image').value;
+    const stand = document.getElementById('stand').value;
+    const category = document.getElementById('category').value;
+    const agegroup = document.getElementById('agegroup').value;
+    const description = document.getElementById('description').value;
+
+    const newExhibitor = { name, image, stand, category, agegroup, description };
+
+    if (id) {
+        
+        exhibitors[id] = newExhibitor;
+    } else {
+        
+        exhibitors.push(newExhibitor);
+    }
+
+    addDataToHTML();  
+    document.getElementById('exhibitorForm').reset();  
+}
+
+
+function editExhibitor(index) {
+    const exhibitor = exhibitors[index];
+    document.getElementById('exhibitorId').value = index;  
+    document.getElementById('name').value = exhibitor.name;
+    document.getElementById('image').value = exhibitor.image;
+    document.getElementById('stand').value = exhibitor.stand;
+    document.getElementById('category').value = exhibitor.category;
+    document.getElementById('agegroup').value = exhibitor.agegroup;
+    document.getElementById('description').value = exhibitor.description;
+}
+
+
+function deleteExhibitor(index) {
+    exhibitors.splice(index, 1);
+    addDataToHTML();  
+}
+
+    </script>
+</body>
+</html>

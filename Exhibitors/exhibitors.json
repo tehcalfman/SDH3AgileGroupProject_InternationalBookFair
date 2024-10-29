@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name":"Folens",
+        "stand": "STAND P1",
+        "image": "img/1.jpg",
+        "category": "Education",
+        "agegroup": "Junior Infants - 6th Year",
+        "description": "As an Irish owned company we have been adapting to the changing needs of school communities for the last 65 years. Our mission is to provide outstanding educational tools that have a positive impact on teaching and learning, by responding to our customers' needs. Our vision is to make great learning easy. "
+    },
+    {
+        "id": 2,
+        "name":"The O'Brien Press",
+        "stand": "STAND P2",
+        "image": "img/2.jpg",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "All Ages",
+        "description": "The O'Brien Press is Ireland's leading general publisher of both adult and children's books. Our list covers a huge range, including biography, humour, photography, history, art, fiction, politics, cookery, sport, music, memoir, true crime and travel and we are constantly expanding into new and exciting areas."
+    },
+    {
+        "id": 3,
+        "name":"Cork University Press",
+        "stand":"STAND P3",
+        "image": "img/3.jpg",
+        "category": "Education",
+        "agegroup": "Undergrad and Over",
+        "description": "  Cork University Press aims to stimulate Irish learning by reflecting distinctive and distinguished scholarship in its publications. The Press began publishing in 1925 and is the oldest university press in Ireland. Our philosophy has been to encourage a broad spectrum of debate in the field of Irish Studies by publishing research which engages with contemporary cultural debate. Owing to the spread of Irish Studies in third level (university) institutions during recent decades, throughout North America, Europe and Australia, research in the field has increased in depth and range. While the Press specialises in the broad field of Irish Cultural Studies, our subject range extends across the fields of music, art history, literary criticism and poetry."
+    },
+    {
+        "id": 4,
+        "name":" Sandycove",
+        "stand": "STAND P4",
+        "image": "img/4.jpg",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "Adult",
+        "description": "Sandycove is the Irish-focussed imprint of Penguin Random House. We are literary and commercial; we are local and global. We are here to help great writers tell their stories to the world. Publishing no more than 20 new titles a year, across the full spectrum of genres and markets, Sandycove selects, edits and promotes each book with love and care. Our list of bestsellers, prize-winners and new discoveries is unmatched, backed up by the immense resources of Penguin Random House."
+    },
+    {
+        "id": 5,
+        "name":"Blackstaff Press",
+        "stand": "STAND P5",
+        "image": "img/5.png",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "All Ages",
+        "description": "Blackstaff Press is regarded as one of Ireland's foremost publishers and is a leading publisher of quality Irish books. Blackstaff Press, founded in 1971, is an iconic brand with a long and rich heritage. It has published authors such as John Hewitt, Bernard McLaverty, Glenn Patterson, Patricia Craig, Ciaran Carson and Éilís Ní Dhuibhne. Our publishing programme is wide-ranging and diverse and embraces both fiction and non-fiction. We have published over 900 titles since Blackstaff was founded in 1971, covering a range of subjects including history, politics, memoir, sport, fiction, poetry, cookery and travel"
+    },
+    {
+        "id": 6,
+        "name":"Lilliput Press",
+        "stand": "STAND P6",
+        "image": "img/6.png",
+        "category": "Biography, Memoir, Historical Non-Fiction",
+        "agegroup": "Adult",
+        "description": "One of Ireland's leading independent publishing houses, the Lilliput Press publishes fiction, non-fiction, poetry and illustrated books of national and international acclaim from our unique office and bookshop in the heart of Dublin."
+    },
+    {
+        "id": 7,
+        "name":"Hachette Book Group",
+        "stand": "STAND P7",
+        "image": "img/7.png",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "All Ages",
+        "description": "A leading U.S. general-interest book publisher made up of dozens of esteemed imprints within the publishing groups Basic Books Group, Grand Central Publishing, Hachette Audio, Little, Brown and Company, Little, Brown Books for Young Readers, Orbit, Running Press Group, and Workman Publishing. We also provide custom distribution, fulfillment, and sales services to other publishing companies. Our books and authors have received the Pulitzer Prize, National Book Award, Caldecott Medal, Newbery Medal, Booker Prize, Nobel Peace Prize and other major honors. We are committed to diversity in our company and our publishing programs, and to fostering a culture of inclusion for all our employees and authors. We are proud to be part of Hachette Livre, the world's third-largest trade and educational publisher."
+    },
+    {
+        "id": 8,
+        "name":" Harper Collins",
+        "stand": "STAND P8",
+        "image": "img/8.jpg",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "All Ages",
+        "description":  "HarperCollins Publishers has been entertaining, educating, and inspiring generations of readers for more than 200 years. From its humble beginnings as a family-run print shop, HarperCollins is today the second-largest consumer book publisher in the world. Headquartered in New York, it has more than 4,000 employees working across publishing operations in 15 countries and 120 branded imprints. The company publishes approximately 10,000 new books every year in 16 languages and has a print and digital catalog of more than 200,000 titles. We seek to deliver content that presents a diversity of voices and speaks to the global community."
+    },
+    {
+        "id": 9,
+        "name":" Harvard University Press",
+        "stand": "STAND P9",
+        "image": "img/9.png",
+        "category": "Education",
+        "agegroup": "Undergrad and Over",
+        "description":  "Founded in 1913, Harvard University Press is the publisher of such enduring works of scholarship as Carol Gilligan's In a Different Voice, Paul Gilroy's The Black Atlantic, Stephen Jay Gould's The Structure of Evolutionary Theory, James Kugel's The Bible As It Was, Toni Morrison's Playing in the Dark, Thomas Piketty's Capital in the Twenty-First Century, John Rawls's A Theory of Justice, Helen Vendler's The Art of Shakespeare's Sonnets, and E. O. Wilson's On Human Nature. We publish books for a general readership as well as scholarly audiences, written by world-renowned experts and new voices who are redefining entire fields of inquiry. Our commitment to world classics is exemplified by an unrivaled collection of translation series, anchored by the iconic Loeb Classical Library."
+    },
+    {
+        "id": 10,
+        "name":"Macmillan Publishers",
+        "stand": "STAND P10",
+        "image": "img/10.png",
+        "category": "Fiction and Non-Fiction",
+        "agegroup": "All Ages",
+        "description":  "Macmillan Publishers is a leading publishing company and home to some of the world's most cherished authors and creators. Our imprints publish a wide range of genres and formats for every kind of reader — from adult fiction and nonfiction to many inspired children's books. Our list features bestselling, award-winning literary talent, including the Nobel Prize, the Man Booker Prize, the Pulitzer Prize, the National Book Award, the Newbery Medal, and the Caldecott Medal."
+    }
+
+]

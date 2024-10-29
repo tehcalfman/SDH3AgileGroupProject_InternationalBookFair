@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitor Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="index.html" class="dropbtn">Exhibitors</a>
+            <div class="dropdown-content">
+              <a href="manageExhibitors.html">Admin</a>
+        <li><a href="index.html">Visitors</a></li>
+      </ul> 
+    <div class="container">
+        
+        <div class="title">Exhibitor Details</div>
+        <div class="details">
+            <div class="left-column">
+                <div class="image">
+                    <img src="">
+                </div>
+                <div class="metadata">
+                    <div class="stand">
+                        <span class="metadata-label">Stand</span>
+                        <span class="metadata-value"></span>
+                    </div>
+                    <div class="category">
+                        <span class="metadata-label">Category</span>
+                        <span class="metadata-value"></span>
+                    </div>
+                    <div class="agegroup">
+                        <span class="metadata-label">Age Group</span>
+                        <span class="metadata-value"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let exhibitors = null;
+        fetch('exhibitors.json').then(response => response.json()).then(data => {
+            exhibitors = data;
+            showDetails();
+        })
+
+
+        function showDetails() {
+    let detail = document.querySelector('.details');
+    let exhibitorID = new URLSearchParams(window.location.search).get('id');
+    let thisExhibitor = exhibitors.filter(value => value.id == exhibitorID)[0];
+    
+    if(!thisExhibitor) {
+        window.location.href = "/";
+    }
+    
+    detail.querySelector('.image img').src = thisExhibitor.image;
+    detail.querySelector('.name').innerText = thisExhibitor.name;
+    detail.querySelector('.stand .metadata-value').innerText = thisExhibitor.stand;
+    detail.querySelector('.category .metadata-value').innerText = thisExhibitor.category;
+    detail.querySelector('.agegroup .metadata-value').innerText = thisExhibitor.agegroup;
+    detail.querySelector('.description').innerText = thisExhibitor.description;
+}
+
+    </script>
+    
+</body>
+</html>
