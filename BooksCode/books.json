@@ -1,0 +1,72 @@
+[
+    {
+        "title": "The Restaurant At The End of The Universe",
+        "author": "Douglas A. Adams",
+        "genre": "Sci-fi",
+        "description": "Facing annihilation at the hands of the warlike Vogons is a curious time to have a cosmically displaced Arthur Dent and his curious comrades in arms as they hurtle through space powered by pure improbability - and desperately in search of a place to eat.",
+        "img": "bookImg/therestaurantattheendoftheuniverse.jpg"
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "description": "The Hobbit is set in Middle-earth and follows home-loving Bilbo Baggins, the hobbit of the title, who joins the wizard Gandalf and the thirteen dwarves of Thorin's Company, on a quest to reclaim the dwarves' home and treasure from the dragon Smaug. Bilbo's journey takes him from his peaceful rural surroundings into more sinister territory. ",
+        "img": "bookImg/thehobbit.jpg"
+    },
+    {
+        "title": "Ready Player One",
+        "author": "Ernest Cline",
+        "genre": "Sci-fi",
+        "description": "When the creator of a virtual reality world called OASIS dies, he leaves a challenge behind. Hidden inside the virtual world is an Easter Egg, which grants a worthy person total control over OASIS.",
+        "img": "bookImg/readyplayerone.jpg"
+    },
+    {
+        "title": "Demon Road",
+        "author": "Derek Landy",
+        "genre": "Horror Fiction",
+        "description": "Killer cars, vampires, undead serial killers: they're all here. And the demons? Well, that's where Amber comes in... Sixteen years old, smart and spirited, she's just a normal American teenager until the lies are torn away and the demons reveal themselves.",
+        "img": "bookImg/demonroad.jpg"
+    },
+    {
+        "title": "Song of Achilles",
+        "author": "Madeline Miller",
+        "genre": "Historical Fiction",
+        "description": "Achilles, 'the best of all the Greeks,' son of the cruel sea goddess Thetis and the legendary king Peleus, is strong, swift, and beautiful, irresistible to all who meet him. Patroclus is an awkward young prince, exiled from his homeland after an act of shocking violence. Brought together by chance, they forge an inseparable bond, despite risking the gods' wrath.",
+        "img": "bookImg/songofachilles.jpg"
+    },
+    {
+        "title": "The London Eye Mystery",
+        "author": "Siobhán Dowd",
+        "genre": "Mystery",
+        "description": "11.32 a.m. Ted and his sister Kat watch their cousin Salim get on board the London Eye. The pod rises from the ground, high above the city. 12.02 p.m. The pod lands and the doors open. Everyone exits - everyone but Salim.",
+        "img": "bookImg/thelondoneyemystery.jpg"
+    },
+    {
+        "title": "The Ghost in the Machine",
+        "author": "Arthur Koestler",
+        "genre": "Education",
+        "description": "In an attempt to explain human violence, Koestler criticizes the dominant conceptions of psychology of his time (behaviourism) that postulate that human behaviours are subject to the selection of the fittest. For him this theory echoed the Darwinian conceptions of the evolution of species. ",
+        "img": "bookImg/theghostinthemachine.jpg"
+    },
+    {
+        "title": "The Divine Comedy: Inferno",
+        "author": "Dante Alighieri",
+        "genre": "Religious Fiction",
+        "description": "Dante's Inferno, widely hailed as one of the great classics of Western literature, details Dante's journey through the nine circles of Hell.",
+        "img": "bookImg/dantesinferno.jpg"
+    },
+    {
+        "title": "The Bell Jar",
+        "author": "Sylvia Plath",
+        "genre": "Fiction",
+        "description": "The Bell Jar chronicles the crack-up of Esther Greenwood: brilliant, beautiful, enormously talented, and successful, but slowly going under—maybe for the last time. Sylvia Plath masterfully draws the reader into Esther's breakdown with such intensity that Esther's insanity becomes completely real and even rational, as probable and accessible an experience as going to the movies. ",
+        "img": "bookImg/thebelljar.jpg"
+    },
+    {
+        "title": "A Tale of Two Cities",
+        "author": "Charles Dickens",
+        "genre": "Historical Fiction",
+        "description": "A Tale of Two Cities is Charles Dickens’s great historical novel, set against the violent upheaval of the French Revolution.",
+        "img": "bookImg/ataleoftwocities.jpg"
+    }
+]
