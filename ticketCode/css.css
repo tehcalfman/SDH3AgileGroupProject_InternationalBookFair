@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    width: 100%;
+    background-color: #b22222; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    list-style-type: none;
+    padding: 15px;
+    margin: 20px;
+    max-width: 400px;
+    background-color: #8d8882; 
+    border-radius: 10px;
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+li {
+    background-color: #ffefee; 
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-size: 18px;
+}
+
+button {
+    background-color: #b22222; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8b1a1a; 
+}
+
+#myInput {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#purchaseForm {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #b22222; 
+}
+
+#ticketInfo {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333; 
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Book Fair Tickets</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <h2>Tickets</h2>
+    <ul id="myUL">
+        <li>ticket <a href="#">ID305928</a> owned by Jemima <button onclick="buyTicket('ID305928', false)">Buy</button></li>
+        <li>ticket <a href="#">ID393829</a> owned by Lisa <button onclick="buyTicket('ID393829', false)">Buy</button></li>
+        <li>ticket <a href="#">ID103958</a> not owned <button onclick="buyTicket('ID103958', true)">Buy</button></li>
+        <li>ticket <a href="#">ID205838</a> owned by Tina <button onclick="buyTicket('ID205838', false)">Buy</button></li>
+        <li>ticket <a href="#">ID492748</a> not owned <button onclick="buyTicket('ID492748', true)">Buy</button></li>
+    </ul>
+
+    <h2>Seminar Tickets</h2>
+    <ul id="mySUL">
+        <li>seminar ticket <a href="#">SID635242</a> owned by Tim <button onclick="buySeminarTicket('SID635242', false)">Buy</button></li>
+        <li>seminar ticket <a href="#">SID352547</a> owned by Bob <button onclick="buySeminarTicket('SID352547', false)">Buy</button></li>
+        <li>seminar ticket <a href="#">SID643567</a> not owned <button onclick="buySeminarTicket('SID643567', true)">Buy</button></li>
+        <li>seminar ticket <a href="#">SID345544</a> owned by Joe <button onclick="buySeminarTicket('SID345544', false)">Buy</button></li>
+        <li>seminar ticket <a href="#">SID635678</a> not owned <button onclick="buySeminarTicket('SID635678', true)">Buy</button></li>
+    </ul>
+
+    <script>
+        function buyTicket(ticketId, isAvailable) {
+            if (isAvailable) {
+                window.location.href = "ticket_info.html?ticketId=" + ticketId;
+            } else {
+                alert("This ticket is already owned and cannot be bought");
+            }
+        }
+
+        function buySeminarTicket(ticketId, isAvailable) {
+            if (isAvailable) {
+                window.location.href = "buyASaminarTicket.html?ticketId=" + ticketId;
+            } else {
+                alert("This ticket is already owned and cannot be bought");
+            }
+        }
+    </script>
+
+</body>
+</html>

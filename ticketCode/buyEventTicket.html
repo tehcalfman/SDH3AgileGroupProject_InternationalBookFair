@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Information</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <h2>Your Purchase</h2>
+  <p id="seminarTicket">Ticket ID: </p>
+
+  <form id="purchaseForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="cardNumber">Card Number:</label>
+    <input type="password" id="cardNumber" name="cardNumber" required><br><br>
+
+    <button type="button" onclick="submitForm()">Purchase Ticket</button>
+  </form>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const ticketId = urlParams.get('ticketId');
+    document.getElementById('seminarTicket').textContent += ticketId;
+
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const card = document.getElementById('cardNumber').value;
+
+      alert(`Ticket ${ticketId} purchased successfully!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCard: ${card}`);
+    }
+  </script>
+
+</body>
+</html>

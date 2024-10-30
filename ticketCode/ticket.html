@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Book Fair ticket</title>
+    <link rel="stylesheet" href="css.css">
+    
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ticket ID">
+    <ul id="myUL">
+        <li>ticket <a href="#">ID305928</a> owned by Jemima</li>
+        <li>ticket <a href="#">ID393829</a> owned by Lisa</li>
+        <li>ticket <a href="#">ID103958</a> owned by Lia</li>
+        <li>ticket <a href="#">ID205838</a> owned by Tina</li>
+        <li>ticket <a href="#">ID492748</a> owned by Edie</li>
+      </ul>
+
+      <a href="buyTicket.html">Go to buy a ticket or a seminar ticket</a>
+
+
+      
+<script>
+function myFunction() {
+    var Input, Filter, list, items, link, i,TextValue;
+    Input = document.getElementById("myInput");
+    Filter = Input.value.toUpperCase();
+    list = document.getElementById("myUL");
+    items = list.getElementsByTagName("li");
+    
+    for (i = 0; i < items.length; i++) {
+        link = items[i].getElementsByTagName("a")[0];
+        TextValue = link.textContent || link.innerText;
+
+        if (TextValue.toUpperCase().indexOf(Filter) > -1) {
+            items[i].style.display = "";
+        } else {
+            items[i].style.display = "none";
+        }
+    }
+    }
+    </script>
+
+</body>
+</html>
