@@ -1,0 +1,188 @@
+/* Main Container Styles */
+.stallsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Filter Section */
+.filterSection {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.filters select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    min-width: 200px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Stalls Grid Layout */
+.stallsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Stall Card Styles */
+.stall-card {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stall-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.stall-card h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+/* Button Styles */
+.reserve-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.reserve-btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filters select {
+        width: 100%;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .stallsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+} 

@@ -1,0 +1,258 @@
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.danger-btn {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Table Styles */
+.stallsTable {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Filter Section Styles */
+.filterSection {
+    margin: 20px 0;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Edit Button Style */
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+/* Stall Grid and Card Styles */
+.stallsContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stallsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stall-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stall-card.template {
+    display: none;
+}
+
+.stall-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stall-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.stall-status[data-status="available"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.stall-status[data-status="reserved"] {
+    background-color: #ff9800;
+    color: white;
+}
+
+.stall-status[data-status="occupied"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.stall-details {
+    margin: 15px 0;
+}
+
+.stall-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stall-actions button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Statistics Section */
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2196F3;
+}
+
+/* Quick Filters */
+.quick-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+    background: white;
+    color: #2196F3;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #2196F3;
+    color: white;
+}
