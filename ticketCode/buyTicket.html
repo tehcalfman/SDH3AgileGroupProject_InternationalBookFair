@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-
+    <div class="navArea">
+        <nav class="navBar">
+            <a class="navItem">Home</a>
+            <a class="navItem" href="/ticket.html">Tickets</a>
+            <a class="navItem">Stalls</a>
+            <a class="navItem">Exhibitors</a>
+            <a class="navItem">Books</a>
+        </nav>
+    </div>
     <h2>Tickets</h2>
     <ul id="myUL">
         <li>ticket <a href="#">ID305928</a> owned by Jemima <button onclick="buyTicket('ID305928', false)">Buy</button></li>
@@ -29,7 +37,7 @@
     <script>
         function buyTicket(ticketId, isAvailable) {
             if (isAvailable) {
-                window.location.href = "ticket_info.html?ticketId=" + ticketId;
+                window.location.href = "buyEventTicket.html?ticketId=" + ticketId;
             } else {
                 alert("This ticket is already owned and cannot be bought");
             }
@@ -37,7 +45,7 @@
 
         function buySeminarTicket(ticketId, isAvailable) {
             if (isAvailable) {
-                window.location.href = "buyASaminarTicket.html?ticketId=" + ticketId;
+                window.location.href = "buyASeminarTicket.html?ticketId=" + ticketId;
             } else {
                 alert("This ticket is already owned and cannot be bought");
             }
@@ -46,3 +54,4 @@
 
 </body>
 </html>
+
