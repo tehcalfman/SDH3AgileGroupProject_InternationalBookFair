@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="../../SDH3AgileGroupProject_InternationalBookFair-main/finalCSS.css">
+</head>
+<body>
+    <h1>Staff Dashboard</h1>
+    <p>Welcome! You are logged in.</p>
+    <a href="../../Stalls/staff/StallAvailability.html" class="dashboard-link">Go to Stall Management</a>
+    <a href="../../Newsletter/Staff/CreateNews.html" class="dashboard-link">Create News</a>
+    <button id="logoutBtn">Logout</button>
+
+    <script>
+        // Initialize Firebase with your config
+        const firebaseConfig = {
+            apiKey: "AIzaSyAE-pV4A3lK9WC0uVkBfX977MvrMZmBxBs",
+            authDomain: "internation-book-store.firebaseapp.com",
+            projectId: "internation-book-store",
+            storageBucket: "internation-book-store.firebasestorage.app",
+            messagingSenderId: "837866886262",
+            appId: "1:837866886262:web:6f4f74bb2a3252555c7b57",
+            measurementId: "G-896HTYFSTF"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Check authentication state
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                // If not logged in, redirect to login page
+                window.location.href = 'login.html';
+            }
+        });
+
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html> 

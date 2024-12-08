@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Newsletter</title>
+    <link rel="stylesheet" href="styles/createnews.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Newsletter</h1>
+        <form id="newsletterForm">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea id="content" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" required>
+            </div>
+            <button type="submit">Create Newsletter</button>
+        </form>
+        <div id="errorMessage" class="error-message" style="display: none;">Error publishing newsletter.</div>
+        <br>
+        <a href="../../Login/Staff/staff.html" style="text-decoration: none;">
+            <button type="button">Back to Dashboard</button>
+        </a>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAE-pV4A3lK9WC0uVkBfX977MvrMZmBxBs",
+            authDomain: "internation-book-store.firebaseapp.com",
+            projectId: "internation-book-store",
+            storageBucket: "internation-book-store.firebasestorage.app",
+            messagingSenderId: "837866886262",
+            appId: "1:837866886262:web:6f4f74bb2a3252555c7b57"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (!user) {
+                window.location.href = '../../Login/Staff/login.html';
+            }
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const author = document.getElementById('author').value;
+
+            console.log("Attempting to add newsletter:", { title, content, author });
+
+            try {
+                const docRef = await db.collection('newsletters').add({
+                    title: title,
+                    content: content,
+                    author: author,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    publishedBy: firebase.auth().currentUser.email
+                });
+
+                console.log("Newsletter added with ID: ", docRef.id);
+                window.location.href = '../../Login/Staff/staff.html';
+
+            } catch (error) {
+                console.error("Error adding newsletter: ", error);
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.navArea {
+    width: 100%;
+    background-color: #b22222;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.navItem {
+    color: white;
+    font-size: 18px;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#ticketIdFilter {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#ticketListContainer {
+    list-style-type: none;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+    background-color: #8d8882;
+    border-radius: 12px;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.ticket-card {
+    background-color: #ffefee;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-size: 16px;
+}
+
+.ticket-card h3 {
+    color: #b22222;
+    margin-bottom: 10px;
+}

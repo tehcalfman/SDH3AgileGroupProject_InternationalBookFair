@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+   <!-- <link rel="stylesheet" href="temp.css">-->
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+
+        <form id="register-form">
+            <input type="text" id="nameRegister" placeholder="Name" required>
+            <input type="email" id="loginEmailRegister" placeholder="Email" required>
+            <input type="password" id="userPasswordRegister" placeholder="Password" required>
+            <select id="userroleRegister" required>
+                <option value="" disabled selected>Select a role</option>
+                <option value="exhibitor">exhibitor</option>
+                <option value="author">author</option> 
+                <option value="visitor">visitor</option>
+                <option value="presenter">presenter</option>
+              </select>
+              <label for="tosCheckbox">
+                <input type="checkbox" id="tosCheckbox" required>
+                I accept the <a href="/termsofservice.html" target="_blank">Terms of Service</a>
+              </label>
+              <button type="submit">Register</button>
+          </form>
+          
+
+    </div>
+
+    <script type="module" src="registration.js"></script>
+
+</body>
+</html>

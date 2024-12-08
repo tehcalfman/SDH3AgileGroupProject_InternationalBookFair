@@ -1,0 +1,13 @@
+{
+  "events": [
+    {
+      "id": "event1",
+      "title": "Weekend Market",
+      "date": "2024-03-23",
+      "startTime": "08:00",
+      "endTime": "14:00",
+      "stallIds": ["stall1", "stall2"],
+      "description": "Regular weekend farmers market"
+    }
+  ]
+} 

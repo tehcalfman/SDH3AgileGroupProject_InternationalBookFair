@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Tickets</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+    <div class="navArea">
+        <div class="navBar">
+            <a class="navItem">Home</a>
+            <a class="navItem" href="/ticket.html">Tickets</a>
+            <a class="navItem">Stalls</a>
+            <a class="navItem">Exhibitors</a>
+            <a class="navItem">Books</a>
+        </div>
+    </div>
+    
+    <h1>All Tickets</h1>
+    
+    <input type="text" id="ticketIdFilter" placeholder="Enter Ticket ID to Filter" />
+    <button id="filterButton">Filter Tickets</button>
+
+    <div id="ticketListContainer">
+    </div>
+    <a href="buyTicket.html">go to buy a ticket or buy a seminar ticket</a>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

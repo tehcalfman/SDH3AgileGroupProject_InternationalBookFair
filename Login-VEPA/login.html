@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <form class="login-form" id="loginForm">
+            <h1 class="login-title">Sign In</h1>
+            <input class="login-input" id="email" type="email" placeholder="Email" required>
+            <input class="login-input" id="password" type="password" placeholder="Password" required>
+            
+            <div class="login-status" id="login-status"></div>
+            <div class="primary-buttons">
+                <button type="submit" class="submit-btn" id="submit">Login</button>
+                <button type="button" class="signup-btn" id="sign-up">Sign Up</button>
+            </div>
+        </form>
+        
+        <div class="other-login"> 
+            <div class="secondary-buttons">
+                <button class="staff-btn" id="staff-login" onclick = "window.location.href='../Login/Staff/login.html'">Staff Login</button>
+                <button class="admin-btn" id="admin-login" onclick = "window.location.href='../Login/Admin/login.html'">Admin Login</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="module" src="loginscript.js"></script>
+</body>
+</html>

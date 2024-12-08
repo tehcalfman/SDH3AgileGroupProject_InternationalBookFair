@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stall Availability</title>
+        <script type="module" src="scripts/staffStallScripts.js"></script>
+        <link rel="stylesheet" href="../../SDH3AgileGroupProject_InternationalBookFair-main/finalCSS.css">
+    </head>
+    <body>
+        <header>
+            <div class="navArea">
+                <nav class="navBar">
+                    <a class="navItem" href="../Login-VEPA/vepa_page.html">Home</a>
+                    <a class="navItem" href="../ticketCode/buyTicket.html">Tickets</a>
+                    <a class="navItem" href="../Stalls/visitors/VisitorStalls.html">Stalls</a>
+                    <a class="navItem" href="../Exhibitors/index.html">Exhibitors</a>
+                    <a class="navItem" href="../BooksCode/visitorBook.html">Books</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Stall Availability</h1>
+            <div class="stallsContainer">
+                <div class="filterSection">
+                    <h3>Check Availability</h3>
+                    <div class="filters">
+                        <div class="quick-filters">
+                            <button id="toggleAvailable" class="toggle-btn">Show Available Only</button>
+                            <input type="text" id="stallSearch" placeholder="Search by Stall ID">
+                        </div>
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="available">Available</option>
+                            <option value="reserved">Reserved</option>
+                            <option value="occupied">Occupied</option>
+                        </select>
+                        <input type="date" id="dateFilter">
+                    </div>
+                </div>
+                
+                <div class="statistics">
+                    <div class="stat-card">
+                        <h4>Total Stalls</h4>
+                        <p id="totalStalls">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Available</h4>
+                        <p id="availableStalls">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Reserved</h4>
+                        <p id="reservedStalls">0</p>
+                    </div>
+                </div>
+
+                <div class="stallsGrid" id="stallsList">
+                    <div class="stall-card template">
+                        <div class="stall-header">
+                            <h4 class="stall-id"></h4>
+                            <span class="stall-status"></span>
+                        </div>
+                        <div class="stall-details">
+                            <p>Location: <span class="stall-location"></span></p>
+                            <p>Type: <span class="stall-type"></span></p>
+                            <p>Size: <span class="stall-size"></span></p>
+                        </div>
+                        <div class="stall-actions">
+                            <button class="check-in-btn">Check In</button>
+                            <button class="check-out-btn">Check Out</button>
+                            <button class="report-issue-btn">Report Issue</button>
+                            <button class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="confirmationModal" class="modal">
+                <div class="modal-content">
+                    <h3>Confirm Action</h3>
+                    <p id="confirmationMessage"></p>
+                    <div class="modal-actions">
+                        <button id="confirmAction" class="btn-primary">Confirm</button>
+                        <button id="cancelAction" class="btn-secondary">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reportIssueModal" class="modal">
+                <div class="modal-content">
+                    <h3>Report Issue</h3>
+                    <form id="issueForm">
+                        <div class="form-group">
+                            <select id="issueType" required>
+                                <option value="">Select Issue Type</option>
+                                <option value="maintenance">Maintenance Required</option>
+                                <option value="noshow">No Show</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="issueDescription" placeholder="Describe the issue..." required></textarea>
+                        </div>
+                        <div class="modal-actions">
+                            <button type="submit" class="btn-primary">Submit Report</button>
+                            <button type="button" class="btn-secondary cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html> 

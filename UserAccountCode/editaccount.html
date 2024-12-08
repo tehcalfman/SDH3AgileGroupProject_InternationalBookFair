@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Account</title>
+        <link rel="stylesheet" href="../../SDH3AgileGroupProject_InternationalBookFair-main/finalCSS.css">
+    </head>
+    <body>
+        <div class="navArea">
+            <nav class="navBar">
+                <a class="navItem" href="../Login-VEPA/vepa_page.html">Home</a>
+                <a class="navItem" href="../ticketCode/buyTicket.html">Tickets</a>
+                <a class="navItem" href="../Stalls/visitors/VisitorStalls.html">Stalls</a>
+                <a class="navItem" href="../Exhibitors/index.html">Exhibitors</a>
+                <a class="navItem" href="../BooksCode/visitorBook.html">Books</a>
+            </nav>
+        </div>
+        <h1>Account</h1>
+        <br>
+        <h3>Username:</h3>
+        <input id="newUsername"></input>
+        <br>
+        <h3>Email:</h3>
+        <input id = "newEmail"></input>
+        <h3>Role:</h3>
+        <form id="newRole"> 
+            <input id="visitor" type="radio" name="role" value="visitor"/>
+            <label for="visitor">Visitor</label>
+            <input id="author" type="radio" name="role" value="author"/>
+            <label for="author">Author</label>
+            <input id="presentor" type="radio" name="role" value="presentor"/>
+            <label for="presentor">Presentor</label>
+        </form>
+        <br>
+        <button id="Submit">Submit</button>
+        <script type="module" src="accounts.js"></script>
+    </body>
+</html>

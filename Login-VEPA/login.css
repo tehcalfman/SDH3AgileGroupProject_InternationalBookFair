@@ -1,0 +1,148 @@
+body.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.login-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.login-input:focus {
+    border-color: #dc1c1c;
+}
+
+.login-input.error {
+    border-color: #dc3545;
+}
+
+.login-status {
+    text-align: center;
+    min-height: 20px;
+    font-size: 14px;
+    margin: 10px 0;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.primary-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.submit-btn, .signup-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn {
+    background-color: #dc1c1c;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #b51616;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(220, 28, 28, 0.2);
+}
+
+.signup-btn {
+    background-color: #ff3333;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #e62e2e;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(255, 51, 51, 0.2);
+}
+
+.other-login {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.secondary-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.staff-btn, .admin-btn {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    background-color: #f8f9fa;
+    color: #666;
+}
+
+.staff-btn:hover, .admin-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.login-status.error {
+    color: #dc3545;
+}
+
+.login-status.success {
+    color: #28a745;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .primary-buttons {
+        flex-direction: column;
+    }
+
+    .secondary-buttons {
+        flex-direction: column;
+    }
+
+    .submit-btn, .signup-btn, .staff-btn, .admin-btn {
+        width: 100%;
+    }
+}

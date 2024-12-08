@@ -1,0 +1,13 @@
+{
+  "stalls": [
+    {
+      "id": "stall1",
+      "name": "Fresh Produce Stand",
+      "description": "Local fruits and vegetables",
+      "location": "Row A, Spot 1",
+      "category": "Produce",
+      "image": "path/to/produce-image.jpg",
+      "vendorId": "vendor123"
+    }
+  ]
+} 

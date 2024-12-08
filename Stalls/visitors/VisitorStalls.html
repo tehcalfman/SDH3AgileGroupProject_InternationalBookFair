@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Fair Stalls</title>
+        <script type="module" src="../scripts/visitorStallScripts.js"></script>
+        <link rel="stylesheet" href="../../SDH3AgileGroupProject_InternationalBookFair-main/finalCSS.css">
+    </head>
+    <body>
+        <header>
+            <!-- Header content if needed -->
+        </header>
+        <main>
+            <div class="navArea">
+                <nav class="navBar">
+                    <a class="navItem" href="../Login-VEPA/vepa_page.html">Home</a>
+                    <a class="navItem" href="../ticketCode/buyTicket.html">Tickets</a>
+                    <a class="navItem" href="../Stalls/visitors/VisitorStalls.html">Stalls</a>
+                    <a class="navItem" href="../Exhibitors/index.html">Exhibitors</a>
+                    <a class="navItem" href="../BooksCode/visitorBook.html">Books</a>
+                </nav>
+            </div>
+            <div class="stallsContainer">
+                <h1>Book Fair Stalls</h1>
+                
+                <div class="filterSection">
+                    <h3>Find Stalls</h3>
+                    
+                    <!-- Search bar with improved accessibility -->
+                    <div class="search-container">
+                        <label for="searchInput" class="visually-hidden">Search stalls</label>
+                        <input type="text" id="searchInput" placeholder="Search by author/exhibitor name..." aria-label="Search stalls">
+                    </div>
+                    
+                    <!-- Filter options with labels -->
+                    <div class="filter-options">
+                        <label for="stallTypeFilter" class="visually-hidden">Filter by vendor type</label>
+                        <select id="stallTypeFilter" aria-label="Filter by vendor type">
+                            <option value="all">All Vendors</option>
+                            <option value="author">Authors</option>
+                            <option value="exhibitor">Exhibitors</option>
+                        </select>
+
+                        <label for="genreFilter" class="visually-hidden">Filter by genre</label>
+                        <select id="genreFilter" aria-label="Filter by genre">
+                            <option value="all">All Genres</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="academic">Academic</option>
+                            <option value="children">Children's Books</option>
+                            <option value="merchandise">Merchandise</option>
+                            <option value="food">Food & Beverages</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="stallsGrid" id="stallsList">
+                    <!-- Loading indicator -->
+                    <div id="loadingIndicator" class="loading-spinner">Loading...</div>
+                    
+                    <!-- No results message -->
+                    <div id="noResults" class="no-results" style="display: none;">
+                        No stalls match your search criteria
+                    </div>
+
+                    <!-- Stall template -->
+                    <template id="stallTemplate">
+                        <div class="stall-card">
+                            <div class="stall-header">
+                                <h3 class="vendor-name"></h3>
+                                <span class="vendor-type"></span>
+                            </div>
+                            <div class="stall-info">
+                                <p class="stall-description"></p>
+                                <p class="categories"></p>
+                                <p class="location"></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </main>
+    </body>
+</html> 

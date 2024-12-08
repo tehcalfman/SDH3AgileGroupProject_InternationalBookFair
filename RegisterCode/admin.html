@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    <div id="admin-panel" style="display: none;">
+        <h2>Users</h2>
+        <ul id="user-list"></ul>
+    </div>
+
+    <div id="edit-user-modal" style="display: none;">
+        <h3>Edit User</h3>
+        <form id="edit-user-form">
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name" name="name" required><br>
+            <label for="edit-email">Email:</label>
+            <input type="email" id="edit-email" name="email" required><br>
+            <label for="edit-role">Role:</label>
+            <select id="edit-role" name="role">
+                <option value="visitor">visitor</option>
+                <option value="exhibitor">exhibitor</option>
+                <option value="presenter">presenter</option>
+                <option value="author">author</option>
+                <option value="admin">admin</option>
+                <option value="staff">staff</option>
+            </select><br>
+            <input type="hidden" id="edit-uid">
+            <button type="submit">Save</button>
+        </form>
+    </div>              
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

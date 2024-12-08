@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stall Reservation</title>
+        <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+        <script type="module" src="scripts/exhibitorStallScripts.js"></script>
+        <link rel="stylesheet" href="../../SDH3AgileGroupProject_InternationalBookFair-main/finalCSS.css">
+    </head>
+    <body>
+        <header>
+            <!-- Same header structure -->
+        </header>
+        <main>
+            <h1>Stall Reservation</h1>
+            <div class="stallsContainer">
+                <div class="filterSection">
+                    <h3>Available Stalls</h3>
+                    <div class="filters">
+                        <select id="typeFilter">
+                            <option value="all">All Types</option>
+                            <option value="corner">Corner Stall</option>
+                            <option value="standard">Standard Stall</option>
+                        </select>
+                        <select id="sizeFilter">
+                            <option value="all">All Sizes</option>
+                            <option value="small">Small (3x3m)</option>
+                            <option value="medium">Medium (4x4m)</option>
+                            <option value="large">Large (5x5m)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="stallsGrid" id="availableStalls">
+                    <!-- Available stalls loaded dynamically -->
+                </div>
+            </div>
+            <div id="reservationModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Reserve Stall</h2>
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <label for="stallId">Stall ID:</label>
+                            <input type="text" id="stallId" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="vendorType">Vendor Type:</label>
+                            <select id="vendorType" required>
+                                <option value="">Select Vendor Type</option>
+                                <option value="author">Author</option>
+                                <option value="exhibitor">Exhibitor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Reservation Date:</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="companyName">Company Name:</label>
+                            <input type="text" id="companyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPerson">Contact Person:</label>
+                            <input type="text" id="contactPerson" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email:</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone:</label>
+                            <input type="tel" id="contactPhone" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html> 

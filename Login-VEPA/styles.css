@@ -1,0 +1,55 @@
+:root {
+    --primary-red: #8b0000;
+    --primary-red-hover: #9b1010;
+    --secondary-red: #990000;
+    --secondary-red-hover: #a91010;
+    --accent-red: #a80000;
+    --accent-red-hover: #b81010;
+    --dark-red: #b70000;
+    --dark-red-hover: #c71010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: #28a745;
+}
+
+
+button:focus, input:focus {
+    outline: 2px solid #dc1c1c;
+    outline-offset: 2px;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
